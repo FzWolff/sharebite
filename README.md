@@ -1,154 +1,97 @@
 # ShareBite Backend API
-
-Backend API untuk aplikasi **ShareBite**, sebuah platform berbagi makanan yang menghubungkan donor makanan dengan penerima untuk mengurangi food waste dan membantu distribusi makanan yang lebih efektif.
+Backend API untuk aplikasi ShareBite, sebuah platform berbagi makanan yang menghubungkan donor makanan dengan penerima untuk mengurangi food waste dan membantu distribusi makanan yang lebih efektif.
 
 ## Teknologi yang Digunakan
-
-* Laravel 10
-* PHP 8.1+
-* MySQL
-* Laravel Sanctum
-* REST API
+Laravel 10
+PHP 8.1+
+MySQL
+Laravel Sanctum
+REST API
 
 ## Fitur Utama
 
 ### Autentikasi
-
-* Login pengguna
-* Token Authentication menggunakan Laravel Sanctum
+Login pengguna
+Token Authentication menggunakan Laravel Sanctum
 
 ### Donasi Makanan
-
-* Melihat daftar donasi makanan
-* Melihat detail donasi makanan
-* Kategori makanan
-* Status ketersediaan makanan
-* Informasi donor dan lokasi pengambilan
+Melihat daftar donasi makanan
+Melihat detail donasi makanan
+Kategori makanan
+Status ketersediaan makanan
+Informasi donor dan lokasi pengambilan
 
 ### Dashboard
-
-* Ringkasan data donasi
-* Statistik aplikasi
+Ringkasan data donasi
+Statistik aplikasi
 
 ## Struktur Database
-
 Database terdiri dari beberapa tabel utama:
 
-* users
-* categories
-* food_donations
-* donation_requests
-* reviews
+users
+categories
+food_donations
+donation_requests
+reviews
 
 File database tersedia pada:
-
-```text
 database/sharebite.sql
-```
 
 ## Instalasi
-
 ### 1. Clone Repository
-
-```bash
 git clone https://github.com/FzWolff/sharebite.git
 cd sharebite
-```
 
 ### 2. Install Dependency
-
-```bash
 composer install
-```
 
 ### 3. Konfigurasi Environment
-
 Salin file `.env.example` menjadi `.env`
-
-```bash
 copy .env.example .env
-```
-
 atau
-
-```bash
 cp .env.example .env
-```
 
 ### 4. Generate Application Key
-
-```bash
 php artisan key:generate
-```
 
 ### 5. Buat Database
-
 Buat database baru dengan nama:
-
-```sql
 sharebite
-```
 
 ### 6. Import Database
-
 Import file:
-
-```text
 database/sharebite.sql
-```
-
 Menggunakan phpMyAdmin atau MySQL Client.
 
 ### 7. Konfigurasi Database
-
 Sesuaikan file `.env`
-
-```env
 DB_CONNECTION=mysql
 DB_HOST=127.0.0.1
 DB_PORT=3306
 DB_DATABASE=sharebite
 DB_USERNAME=root
 DB_PASSWORD=
-```
 
 ### 8. Jalankan Server
-
-```bash
 php artisan serve
-```
-
 Aplikasi akan berjalan pada:
-
-```text
 http://127.0.0.1:8000
-```
 
 ## Endpoint API
 
 ### Login
-
-```http
 POST /api/login
-```
 
 ### Daftar Donasi
-
-```http
 GET /api/donations
-```
 
 ### Detail Donasi
-
-```http
 GET /api/donations/{id}
-```
 
 ## Kontributor
 
 Backend Developer:
-
-* Fazru Dwi Alamyah
+Fazru Dwi Alamyah
 
 ## Lisensi
 
